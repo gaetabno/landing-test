@@ -1,0 +1,31 @@
+.l-hero
+    .l-hero__background
+        video.l-hero__background--video(autoplay muted loop poster="./assets/images/hero-backround.png")
+            source(src="./assets/videos/hero-backgroung.mp4", type="video/mp4")
+            |Your browser does not support the video tag.
+    include ../components/navbar.pug
+    .o-container.o-container--full
+        .l-hero__content.c
+            picture 
+                img.o-image.l-hero__content--img(src="./assets/images/svg/kungu-clean.svg" alt="")
+            each cta in hero.ctas
+                +cta-button(cta.label,cta.link)
+            picture 
+                img.o-image.l-hero__content--icon(src="./assets/images/svg/logo-xplr.svg" alt="")
+            button.xplr-link.js-scrollto-section-two(href=hero.xplr.link2)
+                span.text__14 #{hero.xplr.copy}
+                img.o-arrow-down.o-icon.l-hero__content--arrow(src="./assets/images/svg/arrow-left.svg" alt="" )
+        .l-hero__content--right
+            button.discovermore__button.js-scrollto-section-two
+                span.discovermore__button--copy #{hero.discovermore}
+                span.discovermore__button--stroke
+                img.o-arrow-down.o-icon(src="./assets/images/svg/arrow-left.svg" alt="" )
+            button.js-mute__button
+                img.muted(src="./assets/images/svg/icon-mute.svg" alt="" )
+                img.unmuted(src="./assets/images/svg/icon-unmuted.svg" alt="" )
+                
+
+
+
+
+

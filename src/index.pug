@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+      head
+            meta(charset="UTF-8")
+            meta(http-equiv="X-UA-Compatible" content="IE=edge")
+            meta(name="viewport" content="width=device-width, initial-scale=1.0")
+            title LP NSE
+            link(rel="stylesheet" href="style.scss")
+            script(type="module" src="script.js")
+      body.nse-lp
+
+            //- COMPONENTS
+            include includes/components/cta-button.pug
+            include includes/components/motion-text.pug
+
+            //- INCLUDES
+            include includes/layout/01-hero.pug
+            +motion-text("below-hero","Open your eyes and your mind will follow")
+            include includes/layout/02-author.pug
+            

@@ -1,0 +1,32 @@
+.c-motion-text{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+
+
+    &__background img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__copy{
+        color: white;
+        font-size: min(vw(180px),190px);
+        line-height: em(200px,240px);
+        text-transform: uppercase;
+        font-weight: 500;
+        padding-inline: vw(80px);
+        pointer-events: none;
+        position: absolute; 
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        white-space: nowrap;
+        display: flex;
+        align-items: end;
+    }
+ 
+}

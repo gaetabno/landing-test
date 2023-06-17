@@ -1,0 +1,22 @@
+@import "./scss/object/reset.scss";
+@import "./scss/object/variables.scss";
+@import "./scss/object/mixins.scss";
+@import "./scss/object/typography.scss";
+@import "./scss/object/general.scss";
+
+.nse-lp{
+
+    //COMPONENT
+    @import "./scss/components/navbar.scss";
+    @import "./scss/components/cta-button.scss";
+    @import "./scss/components/motion-text.scss";
+
+
+    // LAYOUT
+    @import "./scss/layout/01-hero.scss";
+    @import "./scss/layout/02-author.scss"; 
+
+
+}
+
+

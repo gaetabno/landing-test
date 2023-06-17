@@ -1,0 +1,47 @@
+.l-author {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__images {
+
+        &--wrapper {
+            position: relative;
+        }
+
+        &--cta {
+            position: absolute;
+            top: vw(24px);
+            right: vw(30px);
+            z-index: 3;
+            color: white;
+            font-size: vw(32px);
+        }
+
+        img {
+            height: $full-height;
+            object-fit: cover;
+        }
+    }
+
+    &__copy {
+        display: grid;
+        place-content: center;
+        height: $full-height;
+        text-align: center;
+        padding: vw(120px) vw(170px);
+
+        &--icon {
+            height: vw(242px);
+            object-fit: contain;
+        }
+
+        h3 {
+            font-weight: 500;
+            margin-bottom: vw(40px);
+        }
+
+        .author-highlighted {
+            background: #313070;
+        }
+    }
+}

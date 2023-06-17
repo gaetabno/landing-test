@@ -1,0 +1,17 @@
+.c-button{
+    display: grid;
+    place-content: center;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    padding: 15px 10px;
+    font-size: max(vw(16,1920),14px);
+    text-transform: uppercase;
+    border-radius: 3px;
+    border:1px solid #fff;
+
+    &:hover{
+        background: transparent;
+        color: #fff;
+    }
+}

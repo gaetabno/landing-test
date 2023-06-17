@@ -1,0 +1,8 @@
+@function vw($start-px, $start-vw: 1920px) {
+  @return calc(($start-px * 100vw) / $start-vw) ;
+}
+
+@function em($font-size,$line-height) {
+  @return calc(($line-height / $font-size) * 1em) ;
+}
+

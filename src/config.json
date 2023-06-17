@@ -1,0 +1,15 @@
+{
+    "config": {
+        "created": true,
+        "countries": "all",
+        "content": {
+            "en": {
+                "pagename": "nse",
+                "html": "customhtml2_756825276",
+                "css": "customhtml2_215806614",
+                "js": "customhtml2_1852780671"
+            }
+        },
+        "enableHtmlProcessing": true
+    }
+}
