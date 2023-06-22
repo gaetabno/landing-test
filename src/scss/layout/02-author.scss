@@ -29,6 +29,8 @@
         height: $full-height;
         text-align: center;
         padding: vw(120px) vw(170px);
+        position: sticky;
+        top: 0;
 
         &--icon {
             height: vw(242px);

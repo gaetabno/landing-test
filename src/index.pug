@@ -15,6 +15,6 @@ html(lang="en")
 
             //- INCLUDES
             include includes/layout/01-hero.pug
-            +motion-text("below-hero","Open your eyes and your mind will follow")
+            +motion-text("below-hero",motion_text.one.copy,"./assets/images/below-hero-bg.png")
             include includes/layout/02-author.pug
-            
+            +motion-text("below-author",motion_text.two.copy,"./assets/images/below-author-bg.png","#","./assets/images/below-author-person.png")

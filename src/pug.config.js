@@ -1,5 +1,8 @@
 module.exports = {
 	"locals": {
+		"translations":{
+			"shopnow":"Shop now"
+		},
 		"navbar": {
 			"back": "Back"
 		},
@@ -22,7 +25,12 @@ module.exports = {
 		},
 		"motion_text": {
 			"one": {
-				"copy": "Open your eyes and your mind will follow"
+				"copy": "Open your eyes and your mind will follow",
+				"image":"./assets/images/below-hero-bg.png"
+			},			
+			"two": {
+				"copy": "Through the eye of artist Alfie Kungu",
+				"image":"./assets/images/below-author-bg.jpg"
 			}
 		},
 		"author":{

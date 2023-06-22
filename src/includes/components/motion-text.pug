@@ -1,6 +1,18 @@
-mixin motion-text(section_id,text)
-    .c-motion-text(id=section_id)
-        picture.c-motion-text__background
-            img(src="./assets/images/section2-bg.png")
-        .c-motion-text__copy.js-textmove
-            span.js-textmove__wrapper #{text}
+mixin motion-text(section_id,text,image,link,anim_image) 
+    if link 
+        a.c-motion-text.js-motiontext(href=link id=section_id)
+            picture.c-motion-text__background
+                img(src=image)
+            .c-motion-text__copy.js-textmove
+                span.js-textmove__wrapper #{text}   
+            span.c-motion-text__cta.text__24 #{translations.shopnow}  
+            if anim_image
+                picture.c-motion-text__animimage.js-imagemove
+                    img(src=anim_image)
+    else
+        .c-motion-text.js-motiontext(id=section_id)
+            picture.c-motion-text__background
+                img(src=image)
+            .c-motion-text__copy.js-textmove
+                span.js-textmove__wrapper #{text}
+
