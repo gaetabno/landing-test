@@ -1,0 +1,44 @@
+.l-products {
+    &__copy {
+        display: grid;
+        place-content: center;
+        text-align: center;
+        padding: vw(214px) vw(350px);
+
+        .products-highlighted {
+            &--green {
+                background: #c8deb1;
+                color: black;
+            }
+            &--purple {
+                background: #d5cbd6;
+                color: black;
+            }
+        }
+    }
+
+    &__list {
+        position: relative;
+        display: flex;  
+        flex-wrap: wrap;
+        gap: vw(90px);  
+        justify-content: center;
+    }
+
+    &__image {
+        width: vw(640px);
+        height: vw(792px);
+
+        &--second{
+            margin-top: vw(200px);
+        }
+    }
+
+    &__background {
+        position: absolute;
+        top: -10%;
+        left: vw(90px);
+        height: vw(400px);
+        z-index: -1;
+    }
+}

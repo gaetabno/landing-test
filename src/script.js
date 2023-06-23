@@ -40,15 +40,46 @@ function textScrolling() {
     document.scrollingElement.scrollTo(0, 0);
 
     gsap.utils.toArray(".js-motiontext").forEach((section) => {
-        const text = section.querySelector(".js-textmove")
+        const text = section.querySelector(".js-textmove");
         const w = text.querySelector(".js-textmove__wrapper");
         const text_padding = ((16000 / 1920) * window.innerWidth) / 100;
         const [xEnd, x] = [w.scrollWidth * -1 + window.innerWidth, 0];
-        const animImage = section.querySelector(    ".js-imagemove"  );
+        const animImage = section.querySelector(".js-imagemove");
         const cta = section.querySelector(".c-motion-text__cta");
-        console.log(animImage )
-        const tl = gsap.timeline();
-        tl.fromTo( w,{ x,},{
+        const tl = gsap.timeline({defaults: {ease: "expo.out"}});
+        const imageAnimation = () => {
+            tl.fromTo(
+                animImage,
+                {
+                    y: 100,
+                    xPercent: -50,
+                    opacity: 0,
+                    scale: 0.9,
+                },
+                {
+                    y: 0,
+                    xPercent: -50,
+                    scale: 1,
+                    opacity: 1,
+                    duration: 1,
+                    duration: 1,
+                    delay: 0.5,
+                }
+            ).fromTo(cta, 
+                { 
+                    opacity: 0, 
+                },
+                {
+                opacity: 1,
+                duration: 1,
+                duration: 1,
+                x: 200,
+            },"-=0.5");
+        };
+        gsap.fromTo(
+            w,
+            {x},
+            {
                 x: xEnd - text_padding,
                 //yPercent:90,
                 scrollTrigger: {
@@ -59,28 +90,8 @@ function textScrolling() {
                     end: "50% center",
                     scrub: 1,
                 },
+                onStart: imageAnimation,
             }
-        )
-        .fromTo( animImage, { 
-            y:-100, 
-            xPercent: -50,
-            opacity: 0,
-            scale:0.9
-            },
-            {
-                y: 0,
-                xPercent: -50,
-                scale:1,
-                opacity: 1,
-                duration: 1, 
-                duration:1
-                // scrollTrigger: { 
-                //     trigger: animImage,
-                //     start: "center-=150 bottom-=250",
-                //     end: "center+=150 bottom-=250",
-                //     scrub: true
-                // }
-            } 
         );
     });
 }

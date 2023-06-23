@@ -3,12 +3,10 @@
         each img in author.prod_imgs 
             .l-author__images--wrapper
                 img.o-image(src=img) 
-                span.l-author__images--cta #{author.cta}
+                span.l-author__images--cta !{author.cta}
     .l-author__copy
         img.o-image.l-author__copy--icon(src=author.icon)
         h3.text__32 
-            |#{author.title}
-            span.o-highlighted.author-highlighted  Alfie Kungu
-            |#{author.title2}
+            |!{author.title} 
         
-        span.text__24 #{author.copy}
+        span.text__24 !{author.copy}

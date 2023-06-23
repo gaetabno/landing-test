@@ -4,8 +4,8 @@ mixin motion-text(section_id,text,image,link,anim_image)
             picture.c-motion-text__background
                 img(src=image)
             .c-motion-text__copy.js-textmove
-                span.js-textmove__wrapper #{text}   
-            span.c-motion-text__cta.text__24 #{translations.shopnow}  
+                span.js-textmove__wrapper !{text}   
+            span.c-motion-text__cta.text__24 !{translations.shopnow}  
             if anim_image
                 picture.c-motion-text__animimage.js-imagemove
                     img(src=anim_image)
@@ -14,5 +14,5 @@ mixin motion-text(section_id,text,image,link,anim_image)
             picture.c-motion-text__background
                 img(src=image)
             .c-motion-text__copy.js-textmove
-                span.js-textmove__wrapper #{text}
+                span.js-textmove__wrapper !{text}
 

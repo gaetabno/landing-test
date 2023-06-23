@@ -1,0 +1,17 @@
+.l-products
+    .l-products__copy 
+        span.text__32 !{products.copy1}
+    .l-products__list
+        .l-products__background
+            img.o-image(src=products.bg_image) 
+            
+        each prod in products.list 
+            a.l-products__image(href=prod.link)
+                picture
+                    img.o-image.l-products__image--first(src=prod.image1)
+            a.l-products__image(href=prod.link)
+                picture
+                    img.o-image.l-products__image--second(src=prod.image2)
+
+    .l-products__copy 
+        span.text__32 !{products.copy2}
