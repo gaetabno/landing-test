@@ -4,6 +4,7 @@
     top: 0;
     left: 0;
     z-index: 4;
+    height: 78px;
 
     .o-container {
         display: grid;
@@ -36,10 +37,15 @@
     }
 
     &__logo {
-        width: 75px;
+        width: 0;
+
+        @include mq(md){
+            width: 75px;
+        }
 
         &.logo-nse {
             opacity: 0;
+            width: 75px;
         }
     }
 
@@ -89,12 +95,20 @@
             }
         }
     }
+
+    &.visible{
+        background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+
+        .logo-nse {
+            opacity: 1;
+        }
+    }
 }
 
 // MENU DRAWER
 .c-navbar__drawer {
     background: #000;
-    width: 50%;
+    width: 100%;
     transform-origin: right;
     transform: scaleX(0);
     height: 100vh;
@@ -102,6 +116,10 @@
     right: 0;
     top: 0;
     z-index: 3;
+
+    @include mq(md){
+        width: 50%;
+    }
 
     &.open{
         transform: scaleX(1);

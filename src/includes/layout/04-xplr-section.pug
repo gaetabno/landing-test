@@ -1,0 +1,19 @@
+.l-xplr-section
+    .l-xplr-section__image
+        img.o-image(src=xplr_section.images[0]) 
+    .l-xplr-section__copy
+        img.l-xplr-section__icon.o-image(src=xplr_section.icon) 
+        span.text__32.fw__500 !{xplr_section.title}
+        span.text__24 !{xplr_section.body}
+        .l-xplr-section__buttons
+            each cta in xplr_section.ctas
+                +cta-button(cta.label,cta.link,"","l-xplr-section__buttons--single")
+        em.text__12.underlined !{xplr_section.tec}
+    img.l-xplr-section__men.o-image(src=xplr_section.images[1]) 
+.l-xplr-section__white
+    h3.l-xplr-section__white--title.text__32 !{xplr_section.white_section.title}
+    each step in xplr_section.white_section.steps
+        a.l-xplr-section__step(href=step.link)
+            img.l-xplr-section__step--icon.o-image(src=step.icon) 
+            span.text__24 !{step.copy}
+        

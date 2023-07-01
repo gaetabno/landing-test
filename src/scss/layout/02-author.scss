@@ -1,6 +1,10 @@
 .l-author {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    
+
+    @include mq('md'){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
     &__images {
 
@@ -31,6 +35,7 @@
         padding: vw(120px) vw(170px);
         position: sticky;
         top: 0;
+        order: 0;
 
         &--icon {
             height: vw(242px);

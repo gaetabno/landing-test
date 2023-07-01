@@ -23,4 +23,14 @@ body {
         line-height: em(32, 44);
     }
     
+} 
+
+.fw{
+    &__500{
+        font-weight: 500;
+    }
+}
+
+.underlined{
+    text-decoration: underline;
 }
