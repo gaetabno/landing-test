@@ -2,6 +2,10 @@
   @return calc(($start-px * 100vw) / $start-vw) ;
 }
 
+@function vh($start-px, $start-vh: 1920px) {
+    @return calc(($start-px * 100vh) / $start-vh) ;
+  }
+
 @function em($font-size,$line-height) {
   @return calc(($line-height / $font-size) * 1em) ;
 }

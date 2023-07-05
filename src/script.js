@@ -15,12 +15,11 @@ hamb.addEventListener("click", (e) => {
 
 //---------------------
 
-let prev = 200;
-const navbar = document.querySelector(".js-navbar");
-const nseLogo = document.querySelector(".js-navbar .js-navbar__logo");
+const prev = 200;
+const navbar = document.querySelector(".js-navbar"); 
 
 window.addEventListener("scroll", function () {
-  let scrollTop = window.pageYOffset || 0;
+  let scrollTop = window.pageYOffset;
 
   if (scrollTop > prev) {
     navbar.classList.add("visible"); 
@@ -64,6 +63,7 @@ function textScrolling() {
         const animImage = section.querySelector(".js-imagemove");
         const cta = section.querySelector(".c-motion-text__cta");
         const tl = gsap.timeline({defaults: {ease: "expo.out"}});
+        const startScrollTrigger= window.screen.width > 768 ? "top+=50 bottom-=210" : "top+=50 bottom-=80"
         const imageAnimation = () => {
             tl.fromTo(
                 animImage,
@@ -86,12 +86,13 @@ function textScrolling() {
                 cta,
                 {
                     opacity: 0,
+                    x: 200,
                 },
                 {
                     opacity: 1,
                     duration: 1,
                     duration: 1,
-                    x: 200,
+                    x: 0,
                 },
                 "-=0.5"
             );
@@ -106,7 +107,7 @@ function textScrolling() {
                     // markers: true,
                     trigger: text,
                     pin: text,
-                    start: "top+=50 bottom-=210",
+                    start: startScrollTrigger,
                     end: "50% center",
                     scrub: 1,
                 },
@@ -130,7 +131,7 @@ const observer = new IntersectionObserver(
         });
     },
     { 
-    threshold: [0.8]
+    threshold: [0.4]
     }
 );
 

@@ -1,5 +1,6 @@
 .l-xplr-section
-    .l-xplr-section__image
+    picture.l-xplr-section__image
+        source(media="(min-width: 768px)", srcset=xplr_section.images[1])
         img.o-image(src=xplr_section.images[0]) 
     .l-xplr-section__copy
         img.l-xplr-section__icon.o-image(src=xplr_section.icon) 
@@ -9,7 +10,9 @@
             each cta in xplr_section.ctas
                 +cta-button(cta.label,cta.link,"","l-xplr-section__buttons--single")
         em.text__12.underlined !{xplr_section.tec}
-    img.l-xplr-section__men.o-image(src=xplr_section.images[1]) 
+    picture.l-xplr-section__men
+        source(media="(min-width: 768px)", srcset=xplr_section.images[3])
+        img.o-image(src=xplr_section.images[2]) 
 .l-xplr-section__white
     h3.l-xplr-section__white--title.text__32 !{xplr_section.white_section.title}
     each step in xplr_section.white_section.steps

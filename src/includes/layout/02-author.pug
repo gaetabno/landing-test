@@ -1,9 +1,9 @@
 .l-author 
-    a.l-author__images(href="#")
+    .l-author__images
         each img in author.prod_imgs 
             .l-author__images--wrapper
                 img.o-image(src=img) 
-                span.l-author__images--cta !{author.cta}
+                +cta-button(translations.shopnow,"#","","c-button--text l-author__images--cta") 
     .l-author__copy
         img.o-image.l-author__copy--icon(src=author.icon)
         h3.text__32 

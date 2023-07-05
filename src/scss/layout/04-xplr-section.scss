@@ -1,71 +1,122 @@
 .l-xplr-section {
     position: relative;
     display: flex;
-    justify-content: start;
+    justify-content: center;
+    flex-direction: column;
     background: black;
 
+    @include mq("md") {
+        flex-direction: row;
+        justify-content: start;
+    }
+
     &__image {
-        width: vw(500px);
+        width: 100%;
+
         img {
             object-fit: cover;
             height: 100%;
         }
+
+        @include mq("md") {
+            width: vw(500px);
+        }
     }
 
     &__copy {
-        width: vw(1100px);
+        width: 100%;
         color: white;
         padding: vw(45px) vw(120px) vw(80px);
-        display: grid;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        gap: vw(30px);
+        gap: vw(30px,720px);
         position: relative;
         z-index: 1;
+        text-align: center;
+
+        @include mq("md") {
+            gap: vw(30px);
+            text-align: left;
+            display: grid;
+            align-items: center;
+            gap: vw(30px);
+            width: vw(1100px);
+        }
     }
 
     &__icon {
-        width: vw(200px);
-        height: vw(110px);
+        width: 160px;
+
+        @include mq("md") {
+            width: vw(200px);
+            height: vw(110px);
+        }
     }
 
     &__buttons {
         display: flex;
-        flex-direction: row;
-        gap: vw(20px);
-        margin-bottom: 15px;
+        flex-direction: column;
+        gap: vw(20px,720px);
+        align-items: center;
+
+        @include mq("md") {
+            gap: vw(20px);
+            flex-direction: row;
+            margin-bottom: 15px;
+        }
 
         &--single {
-            max-width: vw(400px);
+            width: vw(400px,720px);
+
+            @include mq("md") {
+                width: vw(400px);
+            }
         }
     }
 
     &__men {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: vw(600px);
-        object-fit: cover;
-        height: 100%;
-        z-index: 0;
+        margin-bottom: -3px;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+        @include mq("md") {
+            height: 100%;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: vw(600px);
+            object-fit: cover;
+            height: 100%;
+            z-index: 0;
+        }
     }
 
     &__white {
         background: white;
         position: relative;
-        display: grid; 
         justify-content: center;
         text-align: center;
         padding: vw(50px) vw(500px) vw(100px);
-        grid-row-gap: vw(50px);
-        grid-template-areas:   "title title title"
-                                "step-one step-two step-three";
-       
 
-        &--title{
-            grid-area: title;
+        @include mq("md"){
+            display: grid;
+        grid-template-areas:
+            "title title title"
+            "step-one step-two step-three";
+            grid-row-gap: vw(50px); 
+
         }
 
-        &:after{
+        &--title {
+            grid-area: title;
+            margin-top: vw(20px,720px);
+ 
+        }
+
+        &:after {
             content: "";
             position: absolute;
             background-color: white;
@@ -75,20 +126,32 @@
             left: calc(50% - 25px);
             transform: rotate(45deg);
         }
-
     }
 
     &__step {
+        margin-top: vw(40px,720px);
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: vw(25px);
-        padding-inline: vw(10px);
+        gap: vw(25px,720px);
+        padding-inline: vw(10px,720px);
 
-        &--icon{
-            width: vw(100px);
-            height: vw(100px);
+        @include mq("md"){
+            margin: 0;
+            gap: vw(25px);
+            padding-inline: vw(10px);
         }
+    
 
+        &--icon {
+
+            width: vw(50px,720px);
+            height: vw(50px,720px);
+
+            @include mq("md"){
+                width: vw(100px);
+                height: vw(100px);
+            }
+        }
     }
 }

@@ -2,19 +2,17 @@
     .l-products__copy 
         span.text__32 !{products.copy1}
     .l-products__list
-        - let {col1,col2} = products.list
-        .l-products__col
-            a.l-products__image.js-products__image.o-transition(href=col1.link1)
-                img.o-image(src=col1.image1)
-                span.l-products__image--cta.text__32 !{translations.shopmen}
-            a.l-products__image.js-products__image.o-transition(href=col1.link2)
-                img.o-image(src=col1.image2)
-                span.l-products__image--cta.text__32 !{translations.shopwomen}
-        .l-products__col
-            a.l-products__image.js-products__image.o-transition(href=col1.link1)
-                img.o-image(src=col2.image1)
-            a.l-products__image.js-products__image.o-transition(href=col1.link2)
-                img.o-image(src=col2.image2)
+        - let {col1,col2} = products.list 
+        a.l-products__image.js-products__image.o-transition(href=col1.link1)
+            img.o-image(src=col1.image1)
+            span.l-products__image--cta.text__32.c-button.c-button--text.c-button--black !{translations.shopmen}
+        a.l-products__image.js-products__image.o-transition(href=col1.link2)
+            img.o-image(src=col1.image2)
+            span.l-products__image--cta.text__32.c-button.c-button--text.c-button--black !{translations.shopwomen} 
+        a.l-products__image.js-products__image.o-transition(href=col1.link1)
+            img.o-image(src=col2.image1)
+        a.l-products__image.js-products__image.o-transition(href=col1.link2)
+            img.o-image(src=col2.image2)
 
         .l-products__background
             img.o-image(src=products.bg_image) 

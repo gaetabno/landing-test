@@ -48,7 +48,7 @@ module.exports = {
 		"products":{
 			"bg_image":"./assets/images/products-section-bg.png",
 			"copy1":"Through his custom graphics and eye-catching colours, this <span class='o-highlighted products-highlighted--green'>limited&#8209;edition</span> collection mirrors the parallels between the urban and natural worlds.",
-			"copy2":"Nature works on so many different scales. <span class='o-highlighted products-highlighted--purple'>It’s humbling</span>. <br>You realise you’re not at the centre of everything; you’re just a small part of a huge environment with lots of things going on in it.",		
+			"copy2":"Nature works on so many different scales. <br><span class='o-highlighted products-highlighted--purple'>It's&nbsp;humbling</span>. <br>You realise you’re not at the centre of everything; you’re just a small part of a huge environment with lots of things going on in it.",		
 			"list":{
 				"col1":{
 					"image1":"./assets/images/product-1.png",
@@ -64,7 +64,7 @@ module.exports = {
 			
 		},
 		"xplr_section":{
-			"images":["./assets/images/xplr-secion-image.png","./assets/images/xplr-secion-men.png"],
+			"images":["./assets/images/xplr-secion-image-mob.png","./assets/images/xplr-secion-image.png","./assets/images/xplr-secion-men-mob.png","./assets/images/xplr-secion-men.png"],
 			"icon":"./assets/images/svg/xplr-section-logo.svg",
 			"title":"Get a special gift with the NSE | Alfie Kungu collection",
 			"body":"Shop the drop and earn a sneak peek into Alfie Kungu's colourful world with an exclusive member-only stereoscope gift. <br><br>If you are already a member just buy from the NSE | Alfie Kungu collection <br><br>Be quick - gifts are limited!",
